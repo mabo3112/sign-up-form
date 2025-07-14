@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    </style>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -21,34 +26,41 @@
 
         <div class="right-area">
             <div class="header">
-                <p class="header-text">This is not a real online service! You know you need something
-                    like this in your life to help you realize your deepest dreams.
+                    <p class="header-text">This is not a real online service! You know you need something<br>
+                    like this in your life to help you realize your deepest dreams. <br>
                     Sign up <i>now</i> to get started.
                 </p>
                 <br>
-                <p class="header-text">You <i>know</i> you want to</p>
+                <p class="header-text-end">You <i>know</i> you want to</p>
             </div>
-            <div class="form">
-                <p class="header-text">Lets do this!</p>
-                <form action="" class="form-inputs">
-                    <label for="firstName">FIRST NAME</label>
-                    <input type="text" id="firstName" name="firstName">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
-                    <label for="lastName">LAST NAME</label>
-                    <input type="text" name="lastName" id="lastName">
-                    <label for="phoneNr">PHONE NUMBER</label>
-                    <input type="tel" name="phoneNr" id="phoneNr">
-
-
-
-
-
+            <div class="main">
+                <p class="form-header">Lets do this!</p>
+                <form action="" class="form" id="registration" method="post">
+                    <div class="form-inputs">
+                        <label for="firstName">FIRST NAME *</label> 
+                        <input type="text" id="firstName" name="firstName" minlength="2" maxlength="64" required placeholder="first name">
+                        <label for="email">EMAIL  *</label>
+                        <input type="email" id="email" name="email" required placeholder="email@domain">
+                        <label for="password">PASSWORD  *</label>
+                        <input type="password" id="password" name="password" minlength="8" maxlength="64" required>
+                    </div>
+                    <div class="form-inputs">
+                        <label for="lastName">LAST NAME  *</label>
+                        <input type="text" name="lastName" id="lastName" minlength="2" maxlength="64" required placeholder="last name">
+                        <label for="phoneNr">PHONE NUMBER</label>
+                        <input type="tel" name="phoneNr" id="phoneNr"  maxlength="32">
+                        <label for="passwordConfirm">CONFIRM PASSWORD  *</label>
+                        <input type="password" name="passwordConfirm" id="passwordConfirm" minlength="8" maxlength="64" required>
+                    </div>
                 </form>
             </div>
-            <div class="account"></div>
+            <div class="footer">
+                <button class="create-account" type="submit" form="registration">Create Account</button>
+                <div class="log-in">
+                    <p>Already have an account? <a href="">Log in</a></p>
+                </div>
+                
+            </div>
         </div>
     </div>
     
