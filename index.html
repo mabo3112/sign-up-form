@@ -38,7 +38,7 @@
                 <form action="" class="form" id="registration" method="post">
                     <div class="form-inputs">
                         <label for="firstName">FIRST NAME *</label> 
-                        <input type="text" id="firstName" name="firstName" minlength="2" maxlength="64"  pattern="[A-Za-z]" required placeholder="first name">
+                        <input type="text" id="firstName" name="firstName" minlength="2" maxlength="64"  pattern="^[A-Za-z]+$" required placeholder="first name">
                         <label for="email">EMAIL  *</label>
                         <input type="email" id="email" name="email" required placeholder="email@domain">
                         <label for="password">PASSWORD  *</label>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-inputs">
                         <label for="lastName">LAST NAME  *</label>
-                        <input type="text" name="lastName" id="lastName" minlength="2" maxlength="64" pattern="[A-Za-z]" required placeholder="last name">
+                        <input type="text" name="lastName" id="lastName" minlength="2" maxlength="64" pattern="^[A-Za-z]+$" required placeholder="last name">
                         <label for="phoneNr">PHONE NUMBER</label>
                         <input type="tel" name="phoneNr" id="phoneNr"  maxlength="32">
                         <label for="passwordConfirm">CONFIRM PASSWORD  *</label>
